@@ -16,7 +16,9 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 
+# In questa parte vado a comunicare quali sono gli URLS per il sito ed in particolare vado a comunicare che quando si accede al sito
+# ovvero quando spawnano vanno a visualizzare la blog2.urls(che sarà un file che si deve creare all'interno della cartella).
 urlpatterns = [
+    path('', include('blog2.urls')),
     path('admin/', admin.site.urls),
-    #path('', include('blog.urls')),
 ]
